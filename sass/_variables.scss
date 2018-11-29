@@ -24,3 +24,21 @@ $header-font-family: Cardo,
 ‘Book Antiqua’,
 Palatino,
 serif;
+
+//font-size
+
+$h: 1.999rem;
+$p: 1.414rem;
+$sm: 1rem;
+
+//font-weight:
+
+$light = 100;
+$normal = 400;
+$bold = 700;
+
+//breakpoints
+
+$breakpoint-sm: "all and (min-width: 701px) and (max-width:900px)";
+$breakpoint-med: "all and (min-width: 901px) and (max-width: 1400px)";
+$breakpoint-lrg: "all and (min-width:1401px)";

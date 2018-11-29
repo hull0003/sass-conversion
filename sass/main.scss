@@ -3,6 +3,7 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
+
 /*                DEFAULTS
 ***********************************************/
 
@@ -11,26 +12,26 @@
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
 
-*:after,
-*:before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
+
+    &:after,
+    &:before {
+        @include border-box-stuff;
+    }
 }
 
 html {
     font-size: 16px;
     font-family: $main-font-family;
     line-height: 1.6;
-    font-weight: 400;
+    font-weight: $normal;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-weight: 700;
+    font-weight: $bold;
     font-family: $header-font-family;
 }
 
@@ -82,13 +83,13 @@ ul {
 .bg-content1 {
     background-color: $white;
     color: $dark-gray;
-    font-weight: 100;
+    font-weight: $light;
 }
 
 .bg-content2 {
     background-color: $light-blue;
     color: $dark-blue;
-    font-weight: 100;
+    font-weight: $light;
 }
 
 .bg-footer {
@@ -156,21 +157,22 @@ footer .row {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-}
 
-footer .row > * {
-    flex-basis: 50%;
-    padding-bottom: 2rem;
-    border-left: 1px solid $dark-blue;
-    margin-bottom: 2rem;
-}
+    > * {
+        flex-basis: 50%;
+        padding-bottom: 2rem;
+        border-left: 1px solid $dark-blue;
+        margin-bottom: 2rem;
+    }
 
-footer .row.last-row > * {
-    flex-basis: 100%;
-}
+    &.last-row > * {
+        flex-basis: 100%;
+    }
 
-footer .row .col:first-child {
-    border-left: 0;
+
+    & .col:first-child {
+        border-left: 0;
+    }
 }
 
 footer {
@@ -180,24 +182,25 @@ footer {
 /***********************************************
                 NAVIGATION
 ***********************************************/
-header nav {}
+header nav {
 
-header nav > a {
-    text-align: center;
-    text-decoration: none;
-    color: $dark-gray;
-    font-size: 1.414rem;
-    letter-spacing: 0.25rem;
-    border: 1px solid $light-gray;
-    border-bottom: none;
-    padding: 1.0rem 2rem;
-    line-height: 1;
-    background-color: $white;
-}
+    > a {
+        text-align: center;
+        text-decoration: none;
+        color: $dark-gray;
+        font-size: $p;
+        letter-spacing: 0.25rem;
+        border: 1px solid $light-gray;
+        border-bottom: none;
+        padding: 1.0rem 2rem;
+        line-height: 1;
+        background-color: $white;
 
-header nav > a:hover {
-    font-weight: 700;
-    color: $dark-brown;
+        &:hover {
+            font-weight: $bold;
+            color: $dark-brown;
+        }
+    }
 }
 
 /***********************************************
@@ -206,41 +209,43 @@ header nav > a:hover {
 header h1 {
     color: $dark-brown;
     letter-spacing: 0.1rem;
-}
 
-header h1 i.fa-lg {
-    display: block;
-    width: 25%;
-    float: left;
-    font-size: 7rem;
-    line-height: 12.7936rem;
-    color: $light-brown;
-}
 
-header h1 i.fa-lg ~ span {
-    float: right;
-    width: 75%;
-    font-size: 3.998rem;
-    /**
+    & i.fa-lg {
+        display: block;
+        width: 25%;
+        float: left;
+        font-size: 7rem;
+        line-height: 12.7936rem;
+        color: $light-brown;
+
+
+        ~ span {
+            float: right;
+            width: 75%;
+            font-size: 3.998rem;
+            /**
     2 lines of 3.998 * 1.6 = 12.7936
     **/
-    padding-left: 1rem;
-    text-align: right;
+            padding-left: 1rem;
+            text-align: right;
+        }
+    }
 }
 
 .focal h2 {
-    font-size: 1.999rem;
+    font-size: $h;
     line-height: 1.2;
     padding: 2rem 2rem 1rem 2rem;
 }
 
 .focal .author {
-    font-size: 1rem;
+    font-size: $sm;
     padding: 0.2rem 2rem 2rem;
 }
 
 .content1 h3 {
-    font-size: 1.999rem;
+    font-size: $h;
     padding: 0.2rem 2rem 2rem;
 }
 
@@ -250,28 +255,28 @@ header h1 i.fa-lg ~ span {
 }
 
 .content1 p {
-    font-size: 1.414rem;
+    font-size: $p;
     padding: 0.5rem 2rem 2rem;
 }
 
 .content2 h3 {
-    font-size: 1.999rem;
+    font-size: $h;
     padding: 1rem 2rem 0.5rem;
 }
 
 .content2 h4 {
-    font-size: 1.999rem;
+    font-size: $h;
     padding: 1rem 2rem 0rem;
 }
 
 .content2 p {
-    font-size: 1.414rem;
+    font-size: $p;
     padding: 0.5rem 2rem 1rem;
 }
 
 .content2 li {
     padding: 0.5rem 2rem;
-    font-size: 1.414rem;
+    font-size: $p;
 }
 
 .content2 span[lang] {
@@ -285,7 +290,7 @@ header h1 i.fa-lg ~ span {
     content: attr(data-country);
     display: block;
     padding: 0.2rem 1rem 0.2rem 2rem;
-    font-size: 1rem;
+    font-size: $sm;
     line-height: 2rem;
     height: 2rem;
     width: auto;
@@ -327,13 +332,13 @@ header h1 i.fa-lg ~ span {
                 FOOTER
 ***********************************************/
 footer h4 {
-    font-size: 1.414rem;
+    font-size: $p;
     padding: 0.5rem 2rem;
     color: $dark-brown;
 }
 
 footer p {
-    font-size: 1rem;
+    font-size: $sm;
     padding: 0.5rem 2rem;
     color: $dark-gray;
 }
@@ -401,7 +406,7 @@ footer h4[lang=ru] {
 
     header nav > a {
         flex-basis: 20%;
-        font-size: 1rem;
+        font-size: $sm;
         line-height: 2rem;
         min-height: 6rem;
         border: none;
@@ -453,11 +458,11 @@ footer h4[lang=ru] {
     }
 
     section.content2 h4 {
-        font-size: 1.414rem;
+        font-size: $p;
     }
 
     section.content2 li {
-        font-size: 1.414rem;
+        font-size: $p;
     }
 
     footer .fa-circle {
@@ -486,11 +491,12 @@ footer h4[lang=ru] {
     header {
         width: 900px;
         margin: 0 auto;
-    }
 
-    header:before,
-    header:after {
-        width: 300px;
+
+        &:before,
+        &:after {
+            width: 300px;
+        }
     }
 
     header h1 {
@@ -505,16 +511,17 @@ footer h4[lang=ru] {
         float: none;
         font-size: 4rem;
         line-height: 6.3968rem;
-    }
 
-    header h1 i.fa-lg ~ span {
-        float: none;
-        letter-spacing: 0.25rem;
-        font-size: 3.998rem;
-        /**
+
+        ~ span {
+            float: none;
+            letter-spacing: 0.25rem;
+            font-size: 3.998rem;
+            /**
         1 lines of 3.998 * 1.6 = 6.3968
         **/
-        text-align: left;
+            text-align: left;
+        }
     }
 
     header nav {
@@ -522,22 +529,24 @@ footer h4[lang=ru] {
         /* mobile first */
         justify-content: space-around;
         align-items: center;
-    }
 
-    header nav > a {
-        flex-basis: 20%;
-        font-size: 1rem;
-        line-height: 2rem;
-        min-height: 2rem;
-        border: none;
-        border-left: 1px solid $light-gray;
-        padding: 0 1.0rem;
-        margin: 1.0rem 0;
-        background-color: $white;
-    }
 
-    header nav > a:first-child {
-        border-left: none;
+        > a {
+            flex-basis: 20%;
+            font-size: $sm;
+            line-height: 2rem;
+            min-height: 2rem;
+            border: none;
+            border-left: 1px solid $light-gray;
+            padding: 0 1.0rem;
+            margin: 1.0rem 0;
+            background-color: $white;
+
+
+            &:first-child {
+                border-left: none;
+            }
+        }
     }
 
     section.focal,
@@ -592,26 +601,26 @@ footer h4[lang=ru] {
     }
 
     section.content1 h3 {
-        font-size: 1.999rem;
-        font-weight: 100;
+        font-size: $h;
+        font-weight: $light;
     }
 
     section.content1 h3 .fa-2x {
-        font-size: 1.999rem;
+        font-size: $h;
         padding-right: 1rem;
     }
 
     section.content2 h4 {
-        font-size: 1.414rem;
+        font-size: $p;
     }
 
     section.content2 li {
-        font-size: 1.414rem;
+        font-size: $p;
     }
 
     section.content2 p {
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: $sm;
+        font-weight: $normal;
     }
 
     footer .fa-circle {
@@ -677,7 +686,7 @@ footer h4[lang=ru] {
 
     header nav > a {
         flex-basis: 20%;
-        font-size: 1.414rem;
+        font-size: $p;
         line-height: 2rem;
         min-height: 2rem;
         border: none;
@@ -746,7 +755,7 @@ footer h4[lang=ru] {
 
     section.content1 h3 {
         font-size: 2.827rem;
-        font-weight: 100;
+        font-weight: $light;
     }
 
     section.content1 h3 .fa-2x {
@@ -756,19 +765,19 @@ footer h4[lang=ru] {
     }
 
     section.content2 h4 {
-        font-size: 1.999rem;
+        font-size: $h;
     }
 
     section.content2 li {
-        font-size: 1.999rem;
+        font-size: $h;
     }
 
     section.content2 p {
-        font-size: 1.414rem;
+        font-size: $p;
     }
 
     footer p {
-        font-size: 1.414rem;
+        font-size: $p;
         letter-spacing: 0.2rem;
     }
 
