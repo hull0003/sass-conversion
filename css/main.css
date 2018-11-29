@@ -100,10 +100,30 @@ header {
   margin: 0 auto;
   position: relative;
 }
+@media all and (min-width: 701px) and (max-width:900px) {
+  header {
+    width: 700px;
+    margin: 0 auto;
+    min-height: 8rem;
+  }
+}
 
 header h1 {
   width: 100%;
   padding: 0 2rem;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  header h1 {
+    width: 100%;
+    color: #7C593C;
+  }
+}
+
+@media all and (min-width: 701px) and (max-width:900px) {
+  header:before,
+header:after {
+    width: 230px;
+  }
 }
 
 header nav {
@@ -122,19 +142,62 @@ header nav > a {
   flex-shrink: 0;
   text-align: center;
 }
+@media all and (min-width: 701px) and (max-width:900px) {
+  header nav > a {
+    flex-basis: 20%;
+    font-size: 1rem;
+    line-height: 2rem;
+    min-height: 6rem;
+    border: none;
+    border-left: 1px solid #d4d4d4;
+    padding: 1rem;
+    background-color: #fff;
+  }
+  header nav > a:last-child {
+    border-right: 1px solid #d4d4d4;
+  }
+}
 
 section.focal {
   width: 400px;
   /* default */
   margin: 0 auto;
 }
+@media all and (min-width: 701px) and (max-width:900px) {
+  section.focal {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
 
 section.content1 {
   padding: 2rem 0;
 }
+@media all and (min-width: 701px) and (max-width:900px) {
+  section.content1 {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
 
 section.content2 {
   padding: 2rem 0;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  section.content2 {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  section.content2 h4 {
+    font-size: 1.414rem;
+  }
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  section.content2 li {
+    font-size: 1.414rem;
+  }
 }
 
 .row {
@@ -149,11 +212,28 @@ section.content2 {
   /* mobile default */
 }
 
+footer {
+  padding: 2rem 0;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  footer {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
 footer .row {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  footer .row {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 }
 footer .row > * {
   flex-basis: 50%;
@@ -161,20 +241,34 @@ footer .row > * {
   border-left: 1px solid #3a5E63;
   margin-bottom: 2rem;
 }
+@media all and (min-width: 701px) and (max-width:900px) {
+  footer .row > * {
+    flex-basis: 50%;
+  }
+}
 footer .row.last-row > * {
   flex-basis: 100%;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  footer .row.last-row > * {
+    flex-basis: 100%;
+  }
 }
 footer .row .col:first-child {
   border-left: 0;
 }
 
-footer {
-  padding: 2rem 0;
-}
-
 /***********************************************
                 NAVIGATION
 ***********************************************/
+@media all and (min-width: 701px) and (max-width:900px) {
+  header nav {
+    flex-direction: row;
+    /* mobile first */
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 header nav > a {
   text-align: center;
   text-decoration: none;
@@ -186,6 +280,17 @@ header nav > a {
   padding: 1rem 2rem;
   line-height: 1;
   background-color: #fff;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  header nav > a {
+    flex-basis: 20%;
+    font-size: 1rem;
+    line-height: 2rem;
+    min-height: 6rem;
+    border: none;
+    border-left: 1px solid #d4d4d4;
+    background-color: #fff;
+  }
 }
 header nav > a:hover {
   font-weight: 700;
@@ -207,6 +312,16 @@ header h1 i.fa-lg {
   line-height: 12.7936rem;
   color: #C9A689;
 }
+@media all and (min-width: 701px) and (max-width:900px) {
+  header h1 i.fa-lg {
+    display: inline;
+    color: #7C593C;
+    vertical-align: baseline;
+    float: none;
+    font-size: 4rem;
+    line-height: 6.3968rem;
+  }
+}
 header h1 i.fa-lg ~ span {
   float: right;
   width: 75%;
@@ -216,6 +331,17 @@ header h1 i.fa-lg ~ span {
   **/
   padding-left: 1rem;
   text-align: right;
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  header h1 i.fa-lg ~ span {
+    float: none;
+    letter-spacing: 0.25rem;
+    font-size: 3.998rem;
+    /**
+    1 lines of 3.998 * 1.6 = 6.3968
+    **/
+    text-align: left;
+  }
 }
 
 .focal h2 {
@@ -227,6 +353,12 @@ header h1 i.fa-lg ~ span {
 .focal .author {
   font-size: 1rem;
   padding: 0.2rem 2rem 2rem;
+}
+
+@media all and (min-width: 701px) and (max-width:900px) {
+  .content1 .row {
+    /* same as mobile default */
+  }
 }
 
 .content1 h3 {
@@ -262,6 +394,20 @@ header h1 i.fa-lg ~ span {
 .content2 li {
   padding: 0.5rem 2rem;
   font-size: 1.414rem;
+}
+
+@media all and (min-width: 701px) and (max-width:900px) {
+  .content2 .row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media all and (min-width: 701px) and (max-width:900px) {
+  .content2 .row .row .col {
+    flex-basis: 50%;
+  }
 }
 
 .content2 span[lang] {
@@ -346,109 +492,6 @@ footer h4[lang=ru] {
                 MEDIA QUERIES
 ***********************************************/
 @media all and (min-width: 701px) and (max-width: 900px) {
-  header {
-    width: 700px;
-    margin: 0 auto;
-    min-height: 8rem;
-  }
-
-  header h1 {
-    width: 100%;
-    color: #7C593C;
-  }
-
-  header:before,
-header:after {
-    width: 230px;
-  }
-
-  header h1 i.fa-lg {
-    display: inline;
-    color: #7C593C;
-    vertical-align: baseline;
-    float: none;
-    font-size: 4rem;
-    line-height: 6.3968rem;
-  }
-
-  header h1 i.fa-lg ~ span {
-    float: none;
-    letter-spacing: 0.25rem;
-    font-size: 3.998rem;
-    /**
-    1 lines of 3.998 * 1.6 = 6.3968
-    **/
-    text-align: left;
-  }
-
-  header nav {
-    flex-direction: row;
-    /* mobile first */
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  header nav > a {
-    flex-basis: 20%;
-    font-size: 1rem;
-    line-height: 2rem;
-    min-height: 6rem;
-    border: none;
-    border-left: 1px solid #d4d4d4;
-    padding: 1rem;
-    background-color: #fff;
-  }
-
-  header nav > a:last-child {
-    border-right: 1px solid #d4d4d4;
-  }
-
-  section.focal,
-section.content1,
-section.content2,
-footer {
-    width: 700px;
-    margin: 0 auto;
-  }
-
-  .content1 .row {
-    /* same as mobile default */
-  }
-
-  .content2 .row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .content2 .row .col {
-    flex-basis: 50%;
-  }
-
-  footer .row {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  footer .row > * {
-    flex-basis: 50%;
-  }
-
-  footer .row.last-row > * {
-    flex-basis: 100%;
-  }
-
-  section.content2 h4 {
-    font-size: 1.414rem;
-  }
-
-  section.content2 li {
-    font-size: 1.414rem;
-  }
-
   footer .fa-circle {
     color: #89C0C9;
   }
