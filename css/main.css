@@ -370,8 +370,6 @@ section.content2 {
 }
 .row .col {
   flex-basis: 100%;
-  flex-grow: 0;
-  flex-shrink: 0;
   /* mobile default */
 }
 
@@ -416,15 +414,11 @@ footer .row {
 @media all and (min-width: 901px) and (max-width: 1400px) {
   footer .row .col {
     flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 }
 @media all and (min-width: 1401px) {
   footer .row .col {
     flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 }
 footer .row .col:first-child {
@@ -457,15 +451,11 @@ footer .row .last-row > * {
 @media all and (min-width: 901px) and (max-width: 1400px) {
   footer .row .last-row.col {
     flex-basis: 100%;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 }
 @media all and (min-width: 1401px) {
   footer .row .last-row.col {
     flex-basis: 100%;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 }
 @media all and (min-width: 701px) and (max-width:900px) {
@@ -716,8 +706,6 @@ header h1 i.fa-lg ~ span {
 @media all and (min-width: 701px) and (max-width:900px) {
   .content2.row.col {
     flex-basis: 50%;
-    flex-grow: 0;
-    flex-shrink: 0;
   }
 }
 @media all and (min-width: 901px) and (max-width: 1400px) {

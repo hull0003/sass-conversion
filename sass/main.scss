@@ -379,7 +379,7 @@ section.content2 {
 
 
     .col {
-        @include column-size(100%, 0, 0);
+        @include column-size(100%);
         /* mobile default */
     }
 
@@ -423,11 +423,11 @@ footer {
 
         .col {
             @include screen-medium {
-                @include column-size(50%, 0, 0)
+                @include column-size(50%)
             }
 
             @include screen-large {
-                @include column-size(50%, 0, 0);
+                @include column-size(50%);
 
             }
 
@@ -467,11 +467,11 @@ footer {
 
             &.col {
                 @include screen-medium {
-                    @include column-size(100%, 0, 0);
+                    @include column-size(100%);
                 }
 
                 @include screen-large {
-                    @include column-size(100%, 0, 0);
+                    @include column-size(100%);
 
                 }
             }
@@ -670,11 +670,15 @@ header h1 {
 
     &.col {
         @include screen-medium {
-            @include column-size(33%, 1, 0);
+            @include column-size(33%);
+             flex-grow: 1;
+             flex-shrink: 0;
         }
 
         @include screen-large {
-            @include column-size(33%, 1, 0);
+            @include column-size(33%);
+             flex-grow: 1;
+    flex-shrink: 0;
         }
     }
 }
@@ -744,16 +748,20 @@ header h1 {
 
         &.col {
             @include screen-small {
-                @include column-size(50%, 0, 0);
+                @include column-size(50%);
             }
 
             @include screen-medium {
-                @include column-size(25%, 1, 0);
+                @include column-size(25%);
+                 flex-grow: 1;
+    flex-shrink: 0;
 
             }
 
             @include screen-large {
-                @include column-size(20%, 1, 0)
+                @include column-size(20%);
+                     flex-grow: 1;
+    flex-shrink: 0;
             }
         }
     }

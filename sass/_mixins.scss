@@ -30,9 +30,8 @@
 }
 
 
-@mixin column-size($basis, $grow, $shrink){
+@mixin column-size($basis){
     flex-basis: $basis;
-    flex-grow: $grow;
-    flex-shrink: $shrink;
+   
 }
 
