@@ -1,7 +1,5 @@
 /***********************
-
         MIXINS
-
 ***********************/
 
 @mixin font-stack-body {}
@@ -26,7 +24,15 @@
 }
 
 @mixin screen-large {
-    @media #{breakpoint-lrg} {
+    @media #{$breakpoint-lrg} {
         @content
     }
 }
+
+
+@mixin column-size($basis, $grow, $shrink){
+    flex-basis: $basis;
+    flex-grow: $grow;
+    flex-shrink: $shrink;
+}
+
